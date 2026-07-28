@@ -4,6 +4,11 @@ const app = express()
 const path = require('path')
 require('dotenv').config();
 
+let express = require('express');
+
+let example = express();
+example.disable("x-powered-by");
+
 // Import Middleware
 const logger = require('./middleware/logger')
 app.use(logger)
@@ -23,11 +28,8 @@ app.get('/app2', (req, res) => {
 app.get('/users', (req, res, next) => {
   const sql = "SELECT * FROM tb_data ORDER BY id desc"
   connection.query(sql,(error, fields) => {
-    if (error) {
       console.log('error', error)
-    } else {
       res.send(fields)
-    }
   })
 });
 
