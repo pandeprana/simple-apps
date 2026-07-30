@@ -4,3 +4,4 @@ sonar-project.properties
 README.md
 testing
 coverage
+.env
