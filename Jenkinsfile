@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh'''
-                cd app
+                cd apps
                 npm install
                 '''
             }
@@ -20,7 +20,7 @@ pipeline {
         stage('Testing') {
             steps {
                 sh'''
-                cd app
+                cd apps
                 npm test
                 npm run test:coverage
                 '''
@@ -30,7 +30,7 @@ pipeline {
         stage('Code Review') {
             steps {
                 sh'''
-                cd app
+                cd apps
                 sonar-scanner   -Dsonar.projectKey=simple-apps   -Dsonar.sources=.   -Dsonar.host.url=http://172.23.6.126:9000   -Dsonar.token=sqp_150d9be75a2776347e7984b11a6a23c149bfc723
                 '''
             }
