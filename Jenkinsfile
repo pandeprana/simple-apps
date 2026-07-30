@@ -44,10 +44,10 @@ pipeline {
             }
         }
         
-        // stage('Backup') {
-        //     steps {
-        //          sh 'docker compose push' 
-        //     }
-        // }
+        stage('Backup') {
+            steps {
+                 sh 'docker compose push' 
+            }
+        }
     }
 }
