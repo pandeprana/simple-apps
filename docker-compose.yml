@@ -3,7 +3,7 @@ services:
 
   backend:
     build: ./apps
-    image: reg.zakariar.com/simple-apps/simple-apps-prana:0.3
+    image: reg.zakariar.com/simple-apps/simple-apps-prana:0.4
     restart: always
     links:
       - db
