@@ -10,7 +10,7 @@ services:
       - "3000"
     environment:
       - DB_NAME=training
-      - DB_HOST=ipaddress
+      - DB_HOST=db
       - DB_USER=peserta
       - DB_PASS=password
       - APP_PORT=3000
